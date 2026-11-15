@@ -309,6 +309,22 @@
     if (reduced) running = false; else requestAnimationFrame(tick);
   }
 
+  /* ---------- monthly or yearly prices ---------- */
+
+  var periodButtons = Array.prototype.slice.call(document.querySelectorAll("[data-period]"));
+  var priced = Array.prototype.slice.call(document.querySelectorAll(".level [data-m]"));
+  function setPeriod(period) {
+    priced.forEach(function (el) { el.textContent = el.getAttribute("data-" + period); });
+    periodButtons.forEach(function (b) {
+      var on = b.getAttribute("data-period") === period;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+  periodButtons.forEach(function (b) {
+    b.addEventListener("click", function () { setPeriod(b.getAttribute("data-period")); });
+  });
+
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 })();

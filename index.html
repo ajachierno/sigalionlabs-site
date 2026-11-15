@@ -101,39 +101,48 @@
           <p class="eyebrow reveal" style="--i:0"><b>04</b> Five levels</p>
           <h2 id="h-levels" class="title reveal" style="--i:1" data-scramble>Choose how deep it goes</h2>
           <p class="lede reveal" style="--i:2">Reading is free at every level. Your subscription sets how the messages you send are sealed.</p>
+          <div class="billing reveal" style="--i:3" role="group" aria-label="Billing period">
+            <button type="button" class="on" data-period="m" aria-pressed="true">Monthly</button>
+            <button type="button" data-period="y" aria-pressed="false">Yearly <em>save 20%</em></button>
+          </div>
           <ol class="levels">
             <li class="level reveal" style="--i:3; --c:#9aa5b8">
               <span class="rank">α</span><h3>Standard</h3><p class="lvl">Level 1</p>
-              <p class="price"><b>$1.99</b><span>/ month</span></p>
+              <p class="price"><b data-m="$1.99" data-y="$19.10">$1.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
+              <p class="per" data-m="or $19.10 a year" data-y="$1.59 a month, paid once a year">or $19.10 a year</p>
               <p class="spec">X25519<br>AES-128-GCM</p>
               <p class="note">A sound lock on every message.</p>
             </li>
             <li class="level reveal" style="--i:4; --c:#6fb1ff">
               <span class="rank">β</span><h3>Strong</h3><p class="lvl">Level 2</p>
-              <p class="price"><b>$2.99</b><span>/ month</span></p>
+              <p class="price"><b data-m="$2.99" data-y="$28.70">$2.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
+              <p class="per" data-m="or $28.70 a year" data-y="$2.39 a month, paid once a year">or $28.70 a year</p>
               <p class="spec">X25519<br>AES-256-GCM</p>
               <p class="note">The larger key governments specify for their own secrets.</p>
             </li>
             <li class="level reveal" style="--i:5; --c:#7fd1c7">
               <span class="rank">γ</span><h3>Stream</h3><p class="lvl">Level 3</p>
-              <p class="price"><b>$4.99</b><span>/ month</span></p>
+              <p class="price"><b data-m="$4.99" data-y="$47.90">$4.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
+              <p class="per" data-m="or $47.90 a year" data-y="$3.99 a month, paid once a year">or $47.90 a year</p>
               <p class="spec">X25519<br>ChaCha20-Poly1305</p>
               <p class="note">A second cipher family, built independently of AES.</p>
             </li>
             <li class="level reveal" style="--i:6; --c:#c79bff">
               <span class="rank">δ</span><h3>Quantum</h3><p class="lvl">Level 4</p>
-              <p class="price"><b>$7.99</b><span>/ month</span></p>
+              <p class="price"><b data-m="$9.99" data-y="$95.90">$9.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
+              <p class="per" data-m="or $95.90 a year" data-y="$7.99 a month, paid once a year">or $95.90 a year</p>
               <p class="spec">X25519 + ML-KEM-768<br>AES-256-GCM</p>
               <p class="note">Adds a post-quantum key exchange against machines that do not exist yet.</p>
             </li>
             <li class="level apex reveal" style="--i:7; --c:#ffc857">
               <span class="rank">ε</span><h3>Maximum</h3><p class="lvl">Level 5</p>
-              <p class="price"><b>$9.99</b><span>/ month</span></p>
+              <p class="price"><b data-m="$19.99" data-y="$191.90">$19.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
+              <p class="per" data-m="or $191.90 a year" data-y="$15.99 a month, paid once a year">or $191.90 a year</p>
               <p class="spec">X25519 + ML-KEM-1024<br>AES-256-GCM over ChaCha20-Poly1305</p>
               <p class="note">The strongest exchange, and two ciphers that must both fail.</p>
             </li>
           </ol>
-          <p class="fine reveal" style="--i:8">No level is known to be breakable today. Higher levels add margin against future attacks. Prices are per month in US dollars, billed through Google Play.</p>
+          <p class="fine reveal" style="--i:8">No level is known to be breakable today. Higher levels add margin against future attacks. Prices are in US dollars, billed through Google Play. A yearly plan costs 20% less than twelve monthly payments.</p>
         </div>
       </div>
     </section>
