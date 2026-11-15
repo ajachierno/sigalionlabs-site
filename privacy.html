@@ -47,7 +47,7 @@
   <ul>
     <li><strong>Your public keys and Mystiko ID.</strong> These are created on your phone when you first open the app. Other people's phones need them to encrypt messages to you. They are not secret, and the ID is derived from the keys. Your private keys never leave your phone.</li>
     <li><strong>Your stack of single-use public keys.</strong> Your phone uploads these so that each message sent to you can be sealed to a key that is used once. The relay hands each one to a single sender and then deletes it. The matching private keys stay on your phone and are destroyed after use.</li>
-    <li><strong>Encrypted messages waiting for delivery.</strong> A message addressed to you is held until your phone collects it, and then it is deleted from the relay. A message nobody collects is deleted after 30 days. While it waits, it exists only in encrypted form.</li>
+    <li><strong>Encrypted messages waiting for delivery.</strong> This includes any photo or file sent with a message, which is encrypted in exactly the same way. A message addressed to you is held until your phone collects it, and then it is deleted from the relay. A message nobody collects is deleted after 30 days. While it waits, it exists only in encrypted form.</li>
   </ul>
   <p>The relay keeps no record of who has talked to whom, and it does not log the requests it receives. The server's error log can include the IP address of a connection that failed, and that log is kept for no more than 14 days.</p>
 
@@ -78,7 +78,7 @@
     <li><strong>Internet:</strong> to reach the relay.</li>
     <li><strong>Notifications:</strong> to tell you a message has arrived.</li>
   </ul>
-  <p>The app does not request access to your contacts, text messages, location, camera, microphone or files. It contains no advertising or analytics software.</p>
+  <p>The app does not request access to your contacts, text messages, location, camera, microphone or files. To send a photo or file you choose it in Android's own picker, which hands the app that one item and nothing else. A photo is shrunk and saved again before it is sent, which removes hidden details such as where it was taken. The app contains no advertising or analytics software.</p>
 
   <h2>Deleting your data</h2>
   <p>Uninstalling Mystiko deletes your keys, contacts and messages from your phone.</p>
