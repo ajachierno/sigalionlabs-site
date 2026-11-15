@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mystiko: premium encrypted messaging | Sigalion Labs</title>
+<meta name="description" content="Mystiko is a premium encrypted messenger for Android with five encryption levels. The sender decides how long every message lives. iOS coming soon.">
+<meta name="theme-color" content="#06080c">
+<link rel="canonical" href="https://sigalionlabs.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mystiko: premium encrypted messaging">
+<meta property="og:description" content="Five encryption levels. The sender decides how long every message lives. Android now, iOS coming soon.">
+<meta property="og:url" content="https://sigalionlabs.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="veil" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="wipe" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="brand" href="#mystiko" data-go="0" aria-label="Sigalion Labs, first screen">
+    <svg class="sigil" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="21"/>
+      <path d="M11 27c4 4 22 4 26 0"/>
+      <path d="M24 6v29"/>
+      <circle class="dot" cx="24" cy="40" r="1.4"/>
+    </svg>
+    <span>Sigalion Labs</span>
+  </a>
+  <nav class="index" aria-label="Screens">
+    <a href="#mystiko" data-go="0"><i>01</i>Mystiko</a>
+    <a href="#circuit" data-go="1"><i>02</i>Closed circuit</a>
+    <a href="#sender" data-go="2"><i>03</i>The sender decides</a>
+    <a href="#levels" data-go="3"><i>04</i>Five levels</a>
+    <a href="#transit" data-go="4"><i>05</i>In transit</a>
+    <a href="#access" data-go="5"><i>06</i>Access</a>
+  </nav>
+</header>
+
+<main id="deck" class="deck">
+  <div class="track">
+
+    <section class="panel" id="mystiko" aria-labelledby="h-mystiko">
+      <div class="scroll">
+        <div class="inner hero">
+          <p class="eyebrow reveal" style="--i:0">Sigalion Labs presents</p>
+          <h1 id="h-mystiko" class="display reveal" style="--i:1" data-scramble>Mystiko</h1>
+          <p class="greek reveal" style="--i:2">μυστικό <span>Greek: a secret</span></p>
+          <p class="lede reveal" style="--i:3">Premium encrypted messaging for people with something worth keeping quiet.</p>
+          <div class="cta reveal" style="--i:4">
+            <a class="button" href="https://play.google.com/store/apps/details?id=app.mystiko" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5 20 12 6 20.5z"/></svg>
+              <span>Get it on Google Play</span>
+            </a>
+            <p class="platform">Android now. <span>iOS coming soon.</span></p>
+          </div>
+        </div>
+      </div>
+      <button class="hint" data-next type="button">Swipe <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="panel" id="circuit" aria-labelledby="h-circuit">
+      <div class="scroll">
+        <div class="inner">
+          <p class="eyebrow reveal" style="--i:0"><b>02</b> Closed circuit</p>
+          <h2 id="h-circuit" class="title reveal" style="--i:1" data-scramble>Mystiko speaks only to Mystiko</h2>
+          <p class="lede reveal" style="--i:2">No phone number. No email address. No contact list. You are a 26-character ID, and you hand it to the people you choose.</p>
+          <ul class="grid four">
+            <li class="cell reveal" style="--i:3"><h3>Sealed in your hand</h3><p>A message is encrypted on your phone before it leaves, and opened only on the phone it was sent to.</p></li>
+            <li class="cell reveal" style="--i:4"><h3>A new key every time</h3><p>Each message gets its own key. Nothing is reused from one message to the next.</p></li>
+            <li class="cell reveal" style="--i:5"><h3>Sender unknown</h3><p>Your identity travels inside the sealed message. Our server passes it along without learning who wrote it.</p></li>
+            <li class="cell reveal" style="--i:6"><h3>Nothing for us to read</h3><p>We hold no key that opens your messages. If we are asked for them, sealed text is all there is.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="sender" aria-labelledby="h-sender">
+      <div class="scroll">
+        <div class="inner">
+          <p class="eyebrow reveal" style="--i:0"><b>03</b> The sender decides</p>
+          <h2 id="h-sender" class="title reveal" style="--i:1" data-scramble>Your words, your clock</h2>
+          <p class="lede reveal" style="--i:2">Whoever writes a message chooses how long it lives, and the choice holds on both phones.</p>
+          <ol class="clock">
+            <li class="reveal" style="--i:3"><span class="when">Once</span><h3>Delete after reading</h3><p>It stays closed until the reader taps it, then it is gone when they leave the chat.</p></li>
+            <li class="reveal" style="--i:4"><span class="when">5d</span><h3>Five days</h3><p>Removed from both phones five days after you sent it.</p></li>
+            <li class="reveal" style="--i:5"><span class="when">30d</span><h3>Thirty days</h3><p>Removed from both phones thirty days after you sent it.</p></li>
+            <li class="reveal" style="--i:6"><span class="when">∞</span><h3>No limit</h3><p>Kept until one of you deletes it.</p></li>
+          </ol>
+          <p class="aside reveal" style="--i:7"><strong>Take it back.</strong> Press and hold a message you sent and it is removed from both phones. Screenshots are blocked inside the app. A screen can still be photographed with another camera, and no app can prevent that.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="levels" aria-labelledby="h-levels">
+      <div class="scroll">
+        <div class="inner wide">
+          <p class="eyebrow reveal" style="--i:0"><b>04</b> Five levels</p>
+          <h2 id="h-levels" class="title reveal" style="--i:1" data-scramble>Choose how deep it goes</h2>
+          <p class="lede reveal" style="--i:2">Reading is free at every level. Your subscription sets how the messages you send are sealed.</p>
+          <ol class="levels">
+            <li class="level reveal" style="--i:3; --c:#9aa5b8">
+              <span class="rank">α</span><h3>Standard</h3><p class="lvl">Level 1</p>
+              <p class="price"><b>$1.99</b><span>/ month</span></p>
+              <p class="spec">X25519<br>AES-128-GCM</p>
+              <p class="note">A sound lock on every message.</p>
+            </li>
+            <li class="level reveal" style="--i:4; --c:#6fb1ff">
+              <span class="rank">β</span><h3>Strong</h3><p class="lvl">Level 2</p>
+              <p class="price"><b>$2.99</b><span>/ month</span></p>
+              <p class="spec">X25519<br>AES-256-GCM</p>
+              <p class="note">The larger key governments specify for their own secrets.</p>
+            </li>
+            <li class="level reveal" style="--i:5; --c:#7fd1c7">
+              <span class="rank">γ</span><h3>Stream</h3><p class="lvl">Level 3</p>
+              <p class="price"><b>$4.99</b><span>/ month</span></p>
+              <p class="spec">X25519<br>ChaCha20-Poly1305</p>
+              <p class="note">A second cipher family, built independently of AES.</p>
+            </li>
+            <li class="level reveal" style="--i:6; --c:#c79bff">
+              <span class="rank">δ</span><h3>Quantum</h3><p class="lvl">Level 4</p>
+              <p class="price"><b>$7.99</b><span>/ month</span></p>
+              <p class="spec">X25519 + ML-KEM-768<br>AES-256-GCM</p>
+              <p class="note">Adds a post-quantum key exchange against machines that do not exist yet.</p>
+            </li>
+            <li class="level apex reveal" style="--i:7; --c:#ffc857">
+              <span class="rank">ε</span><h3>Maximum</h3><p class="lvl">Level 5</p>
+              <p class="price"><b>$9.99</b><span>/ month</span></p>
+              <p class="spec">X25519 + ML-KEM-1024<br>AES-256-GCM over ChaCha20-Poly1305</p>
+              <p class="note">The strongest exchange, and two ciphers that must both fail.</p>
+            </li>
+          </ol>
+          <p class="fine reveal" style="--i:8">No level is known to be breakable today. Higher levels add margin against future attacks. Prices are per month in US dollars, billed through Google Play.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="transit" aria-labelledby="h-transit">
+      <div class="scroll">
+        <div class="inner">
+          <p class="eyebrow reveal" style="--i:0"><b>05</b> In transit</p>
+          <h2 id="h-transit" class="title reveal" style="--i:1" data-scramble>What crosses the wire</h2>
+          <div class="wire reveal" style="--i:2" aria-hidden="true">
+            <div class="end"><span>Your phone</span><p id="wire-from"></p></div>
+            <div class="mid"><span>Our server</span><p id="wire-mid"></p></div>
+            <div class="end"><span>Their phone</span><p id="wire-to"></p></div>
+          </div>
+          <p class="lede reveal" style="--i:3">Between the two phones there is only sealed text. This is an illustration, and the real thing looks much the same to anyone watching.</p>
+          <ul class="grid two">
+            <li class="cell reveal" style="--i:4"><h3>What our server holds</h3><p>Your public keys, and sealed messages that have not been collected yet. Once a phone collects a message, it is deleted from the server.</p></li>
+            <li class="cell reveal" style="--i:5"><h3>What it never has</h3><p>Your private keys, your contacts' names, your chat history, or the lifespan you chose for a message. Those stay on your phone.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="access" aria-labelledby="h-access">
+      <div class="scroll">
+        <div class="inner hero">
+          <p class="eyebrow reveal" style="--i:0"><b>06</b> Access</p>
+          <h2 id="h-access" class="display small reveal" style="--i:1" data-scramble>Say less</h2>
+          <p class="lede reveal" style="--i:2">Mystiko is for Android. An iOS version is coming soon.</p>
+          <div class="cta reveal" style="--i:3">
+            <a class="button" href="https://play.google.com/store/apps/details?id=app.mystiko" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5 20 12 6 20.5z"/></svg>
+              <span>Get it on Google Play</span>
+            </a>
+            <span class="button ghost" aria-disabled="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h8V4H8zm3 13.500h2v1h-2z"/></svg>
+              <span>iOS coming soon</span>
+            </span>
+          </div>
+          <footer class="foot reveal" style="--i:4">
+            <p>This site sets no cookies and loads nothing from anyone else.</p>
+            <p>© <span id="year">2026</span> Sigalion Labs, a Roo Management, Inc. company. Google Play is a trademark of Google LLC.</p>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<div class="controls" aria-label="Screen controls">
+  <button type="button" data-prev aria-label="Previous screen">←</button>
+  <p class="count" aria-live="polite"><b id="now">01</b><span>/ 06</span></p>
+  <button type="button" data-next aria-label="Next screen">→</button>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
