@@ -23,7 +23,7 @@
 <main>
   <p class="eyebrow">Mystiko</p>
   <h1>Privacy policy</h1>
-  <p class="dated">Effective November 14, 2026</p>
+  <p class="dated">Effective November 15, 2026</p>
 
   <p>Mystiko is an encrypted messaging app for Android, published by Sigalion Labs, the app studio of Roo Management, Inc. ("we"). This policy covers the Mystiko app, the server that passes messages between phones (the "relay"), and this website.</p>
 
@@ -54,6 +54,14 @@
   <h2>Network information</h2>
   <p>Any device that connects to a server on the internet reveals its IP address to that server's hosting and network providers. The relay runs on a server rented from DigitalOcean in the United States. We do not use IP addresses to identify you or to build a profile, and the relay does not attach them to your Mystiko ID.</p>
 
+  <h2>Direct links between phones</h2>
+  <p>For each chat you choose how your messages travel: through the relay, or over a direct link from your phone to the other person's. The relay is the setting until you change it, and the app never changes it for you. If a direct message cannot be delivered it is not sent, and you decide what happens to it.</p>
+  <ul>
+    <li><strong>What a direct link reveals.</strong> To connect, each phone learns the other's IP address, which can show a rough location and network provider. It also shows the other person that you have the app open at that moment. Choose a direct link only with people you are comfortable sharing that with.</li>
+    <li><strong>When your phone answers.</strong> Only while Mystiko is open, and only for a contact whose chat you have set to direct. You can choose to answer every contact you have not blocked. Otherwise your phone stays silent, which looks the same as being offline.</li>
+    <li><strong>What we see.</strong> The invitation that sets up a link passes through the relay encrypted like any message, so we cannot read it. To find a path between the two phones, each one asks a helper on our server what its public address is. That helper sees the IP address that asked and nothing else, and it keeps no log. Messages sent over a direct link never reach our servers, and no copy is held anywhere between the two phones.</li>
+  </ul>
+
   <h2>What stays on your phone</h2>
   <ul>
     <li>Your private keys, stored encrypted with a key held by the Android Keystore.</li>
@@ -75,7 +83,7 @@
 
   <h2>Permissions the app uses</h2>
   <ul>
-    <li><strong>Internet:</strong> to reach the relay.</li>
+    <li><strong>Internet:</strong> to reach the relay and, if you choose a direct link, the other phone.</li>
     <li><strong>Notifications:</strong> to tell you a message has arrived.</li>
   </ul>
   <p>The app does not request access to your contacts, text messages, location, camera, microphone or files. To send a photo or file you choose it in Android's own picker, which hands the app that one item and nothing else. A photo is shrunk and saved again before it is sent, which removes hidden details such as where it was taken. The app contains no advertising or analytics software.</p>
