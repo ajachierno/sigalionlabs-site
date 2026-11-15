@@ -70,7 +70,7 @@
           <p class="lede reveal" style="--i:2">No phone number. No email address. No contact list. You are a 26-character ID, and you hand it to the people you choose.</p>
           <ul class="grid four">
             <li class="cell reveal" style="--i:3"><h3>Sealed in your hand</h3><p>Every message, photo and file is encrypted on your phone before it leaves, and opened only on the phone it was sent to.</p></li>
-            <li class="cell reveal" style="--i:4"><h3>Keys that are destroyed</h3><p>Every message is sealed to a key used once. When it has been read, that key is destroyed, and a recording of the message can never be opened.</p></li>
+            <li class="cell reveal" style="--i:4"><h3>One key, one message</h3><p>Each message is locked with a key that is used once. After your phone opens it, the key is destroyed. The message stays in your chat for as long as its sender allows, but a copy intercepted on the way can never be unlocked.</p></li>
             <li class="cell reveal" style="--i:5"><h3>Sender unknown</h3><p>Your identity travels inside the sealed message. Our server passes it along without learning who wrote it.</p></li>
             <li class="cell reveal" style="--i:6"><h3>Nothing for us to read</h3><p>We hold no key that opens your messages. If we are asked for them, sealed text is all there is.</p></li>
           </ul>
@@ -83,7 +83,7 @@
         <div class="inner">
           <p class="eyebrow reveal" style="--i:0"><b>03</b> The sender decides</p>
           <h2 id="h-sender" class="title reveal" style="--i:1" data-scramble>Your words, your clock</h2>
-          <p class="lede reveal" style="--i:2">Whoever writes a message chooses how long it lives, and the choice holds on both phones.</p>
+          <p class="lede reveal" style="--i:2">Destroying the key stops an intercepted copy from being opened. How long the message itself stays on screen is a separate choice, and it belongs to whoever wrote it. The choice holds on both phones.</p>
           <ol class="clock">
             <li class="reveal" style="--i:3"><span class="when">Once</span><h3>Delete after reading</h3><p>It stays closed until the reader taps it, then it is gone when they leave the chat.</p></li>
             <li class="reveal" style="--i:4"><span class="when">5d</span><h3>Five days</h3><p>Removed from both phones five days after you sent it.</p></li>
@@ -100,8 +100,14 @@
         <div class="inner wide">
           <p class="eyebrow reveal" style="--i:0"><b>04</b> Five levels</p>
           <h2 id="h-levels" class="title reveal" style="--i:1" data-scramble>Choose how deep it goes</h2>
-          <p class="lede reveal" style="--i:2">Reading is free at every level. Your subscription sets how the messages you send are sealed.</p>
-          <div class="billing reveal" style="--i:3" role="group" aria-label="Billing period">
+          <p class="lede reveal" style="--i:2">Every level keeps a message private today. Going deeper is about tomorrow: how much would have to go wrong before someone holding a recorded copy could ever read it.</p>
+          <ul class="why reveal" style="--i:3">
+            <li><b>A flaw is found.</b> If one cipher is ever weakened, a message protected by a second, unrelated design stays shut.</li>
+            <li><b>Computers change.</b> A quantum computer could one day undo the key exchange most of the internet relies on. Levels 4 and 5 add one built to resist it.</li>
+            <li><b>Time passes.</b> Traffic recorded now can be attacked years from now. The longer your words need to stay secret, the deeper you go.</li>
+          </ul>
+          <p class="lede small reveal" style="--i:3">Your level sets how the messages you send are sealed. Reading is free at every level.</p>
+          <div class="billing reveal" style="--i:4" role="group" aria-label="Billing period">
             <button type="button" class="on" data-period="m" aria-pressed="true">Monthly</button>
             <button type="button" data-period="y" aria-pressed="false">Yearly <em>save 20%</em></button>
           </div>
@@ -111,38 +117,43 @@
               <p class="price"><b data-m="$1.99" data-y="$19.10">$1.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
               <p class="per" data-m="or $19.10 a year" data-y="$1.59 a month, paid once a year">or $19.10 a year</p>
               <p class="spec">X25519<br>AES-128-GCM</p>
-              <p class="note">A sound lock on every message.</p>
+              <p class="note">Private against anyone today, with the kind of encryption that protects much of the web.</p>
+              <p class="for"><b>For</b> everyday conversations.</p>
             </li>
             <li class="level reveal" style="--i:4; --c:#6fb1ff">
               <span class="rank">β</span><h3>Strong</h3><p class="lvl">Level 2</p>
               <p class="price"><b data-m="$2.99" data-y="$28.70">$2.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
               <p class="per" data-m="or $28.70 a year" data-y="$2.39 a month, paid once a year">or $28.70 a year</p>
               <p class="spec">X25519<br>AES-256-GCM</p>
-              <p class="note">The larger key governments specify for their own secrets.</p>
+              <p class="note">A key twice as long, the size governments require for their most sensitive material.</p>
+              <p class="for"><b>For</b> things that matter if they get out.</p>
             </li>
             <li class="level reveal" style="--i:5; --c:#7fd1c7">
               <span class="rank">γ</span><h3>Stream</h3><p class="lvl">Level 3</p>
               <p class="price"><b data-m="$4.99" data-y="$47.90">$4.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
               <p class="per" data-m="or $47.90 a year" data-y="$3.99 a month, paid once a year">or $47.90 a year</p>
               <p class="spec">X25519<br>ChaCha20-Poly1305</p>
-              <p class="note">A second cipher family, built independently of AES.</p>
+              <p class="note">A different cipher, designed separately from the standard one. A weakness found in one would not carry over to the other.</p>
+              <p class="for"><b>For</b> not betting on a single design.</p>
             </li>
             <li class="level reveal" style="--i:6; --c:#c79bff">
               <span class="rank">δ</span><h3>Quantum</h3><p class="lvl">Level 4</p>
               <p class="price"><b data-m="$9.99" data-y="$95.90">$9.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
               <p class="per" data-m="or $95.90 a year" data-y="$7.99 a month, paid once a year">or $95.90 a year</p>
               <p class="spec">X25519 + ML-KEM-768<br>AES-256-GCM</p>
-              <p class="note">Adds a post-quantum key exchange against machines that do not exist yet.</p>
+              <p class="note">Adds a second key exchange built to resist quantum computers. A message recorded today stays shut when those machines arrive.</p>
+              <p class="for"><b>For</b> secrets that must last for decades.</p>
             </li>
             <li class="level apex reveal" style="--i:7; --c:#ffc857">
               <span class="rank">ε</span><h3>Maximum</h3><p class="lvl">Level 5</p>
               <p class="price"><b data-m="$19.99" data-y="$191.90">$19.99</b><span data-m="/ month" data-y="/ year">/ month</span></p>
               <p class="per" data-m="or $191.90 a year" data-y="$15.99 a month, paid once a year">or $191.90 a year</p>
               <p class="spec">X25519 + ML-KEM-1024<br>AES-256-GCM over ChaCha20-Poly1305</p>
-              <p class="note">The strongest exchange, and two ciphers that must both fail.</p>
+              <p class="note">The strongest quantum-resistant exchange, and every message locked twice with two unrelated ciphers. Both would have to fail.</p>
+              <p class="for"><b>For</b> when nothing less will do.</p>
             </li>
           </ol>
-          <p class="fine reveal" style="--i:8">No level is known to be breakable today. Higher levels add margin against future attacks. Prices are in US dollars, billed through Google Play. A yearly plan costs 20% less than twelve monthly payments.</p>
+          <p class="fine reveal" style="--i:8">No level is known to be breakable today. Prices are in US dollars, billed through Google Play. A yearly plan costs 20% less than twelve monthly payments.</p>
         </div>
       </div>
     </section>

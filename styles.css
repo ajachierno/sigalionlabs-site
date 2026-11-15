@@ -522,6 +522,22 @@ body.js .hint { display: block; }
 .level.apex { border-color: rgba(255, 200, 87, 0.42); }
 .level.apex::after { opacity: 0.13; }
 
+/* ---------- why go deeper ---------- */
+
+.why {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 26px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.why li { padding: 18px 20px 20px; background: rgba(8, 11, 16, 0.82); font-size: 14px; color: #a4b1b6; }
+.why b { display: block; margin-bottom: 6px; font-family: var(--serif); font-weight: 400; font-size: 19px; color: #eef3f4; }
+.lede.small { margin-top: 22px; font-size: 15px; color: var(--dim); }
+.for { margin-top: auto; padding-top: 14px; font-size: 13px; color: var(--text); }
+.for b { font-family: var(--mono); font-weight: 400; font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--c); margin-right: 6px; }
+
 /* ---------- monthly or yearly ---------- */
 
 .billing { display: none; margin-top: 30px; border: 1px solid var(--line); width: max-content; max-width: 100%; }
@@ -640,7 +656,7 @@ body.js .controls { display: flex; }
 
 @media (max-width: 640px) {
   .scroll { padding: 88px 20px 104px; }
-  .levels, .grid.four, .grid.two, .clock { grid-template-columns: 1fr; }
+  .levels, .grid.four, .grid.two, .clock, .why { grid-template-columns: 1fr; }
   .wire { grid-template-columns: 1fr; }
   .wire > div { min-height: 0; }
   .level:hover { transform: none; }
