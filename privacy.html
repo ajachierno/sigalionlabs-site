@@ -46,6 +46,7 @@
   <h2>What our relay stores</h2>
   <ul>
     <li><strong>Your public keys and Mystiko ID.</strong> These are created on your phone when you first open the app. Other people's phones need them to encrypt messages to you. They are not secret, and the ID is derived from the keys. Your private keys never leave your phone.</li>
+    <li><strong>Your stack of single-use public keys.</strong> Your phone uploads these so that each message sent to you can be sealed to a key that is used once. The relay hands each one to a single sender and then deletes it. The matching private keys stay on your phone and are destroyed after use.</li>
     <li><strong>Encrypted messages waiting for delivery.</strong> A message addressed to you is held until your phone collects it, and then it is deleted from the relay. A message nobody collects is deleted after 30 days. While it waits, it exists only in encrypted form.</li>
   </ul>
   <p>The relay keeps no record of who has talked to whom, and it does not log the requests it receives. The server's error log can include the IP address of a connection that failed, and that log is kept for no more than 14 days.</p>
@@ -90,7 +91,7 @@
   <p>Mystiko is not directed at children under 13, and we do not knowingly collect information from them.</p>
 
   <h2>Requests from authorities</h2>
-  <p>If we are legally required to hand over data, the only data we hold is what is listed under "What our relay stores": public keys, Mystiko IDs, and encrypted messages not yet delivered. We do not hold the keys that would decrypt those messages.</p>
+  <p>If we are legally required to hand over data, the only data we hold is what is listed under "What our relay stores": public keys, Mystiko IDs, and encrypted messages not yet delivered. Once a message has been read, the key that could open it no longer exists anywhere. We do not hold the keys that would decrypt those messages.</p>
 
   <h2>Changes to this policy</h2>
   <p>If this policy changes, we will post the new version at this address and update the effective date.</p>
