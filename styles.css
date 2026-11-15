@@ -603,6 +603,19 @@ body.js .billing { display: inline-flex; }
 
 /* ---------- controls ---------- */
 
+/* Text that scrolls up under the header fades out instead of running behind the menu. */
+body.js .deck::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 96px;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(6, 8, 12, 0.97) 45%, rgba(6, 8, 12, 0));
+}
+
 /* Text that scrolls under the controls fades out instead of colliding with them. */
 body.js .deck::after {
   content: "";
