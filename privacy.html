@@ -59,7 +59,9 @@
   <ul>
     <li><strong>What a direct link reveals.</strong> To connect, each phone learns the other's IP address, which can show a rough location and network provider. It also shows the other person that you have the app open at that moment. Choose a direct link only with people you are comfortable sharing that with.</li>
     <li><strong>When your phone answers.</strong> Only while Mystiko is open, and only for a contact whose chat you have set to direct. You can choose to answer every contact you have not blocked. Otherwise your phone stays silent, which looks the same as being offline.</li>
-    <li><strong>What we see.</strong> The invitation that sets up a link passes through the relay encrypted like any message, so we cannot read it. To find a path between the two phones, each one asks a helper on our server what its public address is. That helper sees the IP address that asked and nothing else, and it keeps no log. Messages sent over a direct link never reach our servers, and no copy is held anywhere between the two phones.</li>
+    <li><strong>What we see.</strong> The invitation that sets up a link passes through the relay encrypted like any message, so we cannot read it. To find a path between the two phones, each one asks a helper on our server what its public address is. That helper sees the IP address that asked and nothing else, and it keeps no log. Messages sent phone to phone never reach our servers, and no copy is held anywhere between the two phones.</li>
+    <li><strong>The pass-through helper.</strong> Some networks, mobile networks especially, do not let two phones connect to each other. When that happens, a direct link can go through a helper on our server instead. The helper forwards the encrypted traffic as it passes and cannot read it. It stores nothing and keeps no log. Like any server, it sees the IP addresses of the two phones while the link is open. You can turn the helper off in the app, in which case a direct link is made phone to phone or not at all, and the chat always shows which kind of link you have.</li>
+    <li><strong>Holding a message.</strong> If a direct link is not available, you can keep a message on your own phone until it is. It stays encrypted on your phone and goes nowhere until the link opens or you choose another route.</li>
   </ul>
 
   <h2>What stays on your phone</h2>
@@ -83,7 +85,7 @@
 
   <h2>Permissions the app uses</h2>
   <ul>
-    <li><strong>Internet:</strong> to reach the relay and, if you choose a direct link, the other phone.</li>
+    <li><strong>Internet:</strong> to reach the relay and, if you choose a direct link, the other phone or the pass-through helper.</li>
     <li><strong>Notifications:</strong> to tell you a message has arrived.</li>
   </ul>
   <p>The app does not request access to your contacts, text messages, location, camera, microphone or files. To send a photo or file you choose it in Android's own picker, which hands the app that one item and nothing else. A photo is shrunk and saved again before it is sent, which removes hidden details such as where it was taken. The app contains no advertising or analytics software.</p>
