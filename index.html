@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mystiko: premium encrypted messaging | Sigalion Labs</title>
-<meta name="description" content="Mystiko is a premium encrypted messenger, exclusive to Android, with five encryption levels. The sender decides how long every message lives. Exclusive to Android. Coming soon to Google Play.">
+<meta name="description" content="Mystiko is a premium encrypted messenger, exclusive to Android, with five encryption levels. The sender decides how long every message lives, and whether it travels through our relay or straight from phone to phone. Coming soon to Google Play.">
 <meta name="theme-color" content="#06080c">
 <link rel="canonical" href="https://sigalionlabs.com/">
 <meta property="og:type" content="website">
@@ -36,7 +36,8 @@
     <a href="#sender" data-go="2"><i>03</i>The sender decides</a>
     <a href="#levels" data-go="3"><i>04</i>Five levels</a>
     <a href="#transit" data-go="4"><i>05</i>In transit</a>
-    <a href="#access" data-go="5"><i>06</i>Access</a>
+    <a href="#routes" data-go="5"><i>06</i>Two routes</a>
+    <a href="#access" data-go="6"><i>07</i>Access</a>
   </nav>
 </header>
 
@@ -170,9 +171,29 @@
           </div>
           <p class="lede reveal" style="--i:3">Between the two phones there is only sealed text. This is an illustration, and the real thing looks much the same to anyone watching.</p>
           <ul class="grid two">
-            <li class="cell reveal" style="--i:4"><h3>What our server holds</h3><p>Your public keys, and sealed messages that have not been collected yet. Once a phone collects a message, it is deleted from the server.</p></li>
+            <li class="cell reveal" style="--i:4"><h3>What our server holds</h3><p>Your public keys, and sealed messages that have not been collected yet. Once a phone collects a message, it is deleted from the server. A message sent on the direct route is never held there at all.</p></li>
             <li class="cell reveal" style="--i:5"><h3>What it never has</h3><p>Your private keys, your contacts' names, your chat history, or the lifespan you chose for a message. Those stay on your phone.</p></li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="routes" aria-labelledby="h-routes">
+      <div class="scroll">
+        <div class="inner wide">
+          <p class="eyebrow reveal" style="--i:0"><b>06</b> Two routes</p>
+          <h2 id="h-routes" class="title reveal" style="--i:1" data-scramble>You pick the road</h2>
+          <p class="lede reveal" style="--i:2">Every chat has two ways to deliver a message. You choose one for each chat and can change it whenever you like. Mystiko never changes it for you. The message is sealed the same way on both.</p>
+          <ul class="grid two">
+            <li class="cell reveal" style="--i:3"><h3>Through the relay</h3><p>Your sealed message waits on our server until the other phone collects it, for up to 30 days. It works at any hour, whether or not they have the app open, and neither of you learns the other's internet address. The cost: a sealed copy sits with us until it is picked up.</p></li>
+            <li class="cell reveal" style="--i:4"><h3>Direct</h3><p>Your phone connects to theirs and hands the message over. No copy waits on our server. The cost: you both need Mystiko open at the same moment, the other person can tell you are online, and the two phones can learn each other's internet address.</p></li>
+          </ul>
+          <ul class="why reveal" style="--i:5">
+            <li><b>If they are not there.</b> Nothing is sent, and you are told. Then you choose: send that message through the relay, or hold it on your own phone. A held message leaves by itself, phone to phone, the next time you both have Mystiko open.</li>
+            <li><b>If the network is in the way.</b> Some networks, mobile ones especially, will not let two phones connect. A direct link can then pass through a helper on our server. The helper forwards the sealed message as it goes by, cannot read it and keeps nothing. The chat says when a link runs this way, and you can switch the helper off.</li>
+            <li><b>What direct does not do.</b> It does not remove our server from the picture. The relay still introduces the two phones, and it still holds your public keys so people can write to you.</li>
+          </ul>
+          <p class="fine reveal" style="--i:6">The relay is the setting every chat starts with. Your phone answers a direct link only while Mystiko is open, and only for the people you have chosen to link with.</p>
         </div>
       </div>
     </section>
@@ -180,7 +201,7 @@
     <section class="panel" id="access" aria-labelledby="h-access">
       <div class="scroll">
         <div class="inner hero">
-          <p class="eyebrow reveal" style="--i:0"><b>06</b> Access</p>
+          <p class="eyebrow reveal" style="--i:0"><b>07</b> Access</p>
           <h2 id="h-access" class="display small reveal" style="--i:1" data-scramble>Say less</h2>
           <p class="lede reveal" style="--i:2">Mystiko is exclusive to Android.</p>
           <div class="cta reveal" style="--i:3">
@@ -203,7 +224,7 @@
 
 <div class="controls" aria-label="Screen controls">
   <button type="button" data-prev aria-label="Previous screen">←</button>
-  <p class="count" aria-live="polite"><b id="now">01</b><span>/ 06</span></p>
+  <p class="count" aria-live="polite"><b id="now">01</b><span>/ 07</span></p>
   <button type="button" data-next aria-label="Next screen">→</button>
 </div>
 
